@@ -5,7 +5,7 @@ const path = require('path')
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
-
+app.use(express.json()); 
 //// to connect the db from db.js
 const connectDB = require('./config/db');
 connectDB();
